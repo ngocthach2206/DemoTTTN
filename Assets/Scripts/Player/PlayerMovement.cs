@@ -5,9 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     //MOVEMENT//
-    public float moveSpeed; //define the speed of player
-    Rigidbody2D rb; //reference
-
     [HideInInspector]
     public Vector2 moveDir; //check the direction player is moving
     [HideInInspector]
@@ -17,6 +14,10 @@ public class PlayerMovement : MonoBehaviour
     public float lastHorizontalVector;
     [HideInInspector]
     public float lastVerticalVector;
+
+    //REFERENCES//
+    Rigidbody2D rb;
+    public CharacterScriptableObject characterData;
 
     // Start is called before the first frame update
     void Start()
@@ -63,6 +64,6 @@ public class PlayerMovement : MonoBehaviour
 
     void Move()
     {
-        rb.velocity = new Vector2(moveDir.x * moveSpeed, moveDir.y * moveSpeed);
+        rb.velocity = new Vector2(moveDir.x * characterData.MoveSpeed, moveDir.y * characterData.MoveSpeed);
     }
 }

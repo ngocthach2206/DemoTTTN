@@ -296,6 +296,8 @@ GameObject:
   - component: {fileID: 586367819}
   - component: {fileID: 586367824}
   - component: {fileID: 586367825}
+  - component: {fileID: 586367826}
+  - component: {fileID: 586367827}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -315,11 +317,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96909869fffda814d8aa246bd15eb916, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 5
   moveDir: {x: 0, y: 0}
   lastMovedVector: {x: 0, y: 0}
   lastHorizontalVector: 0
   lastVerticalVector: 0
+  characterData: {fileID: 11400000, guid: f518c6ec25b4e76459ea08bd0d2c0517, type: 2}
 --- !u!61 &586367820
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -408,7 +410,7 @@ SpriteRenderer:
   m_SortingLayerID: 1920756025
   m_SortingLayer: 3
   m_SortingOrder: 20
-  m_Sprite: {fileID: 1947629765, guid: 49593f548e6f1de469a6c51d7773edcb, type: 3}
+  m_Sprite: {fileID: -1198973906, guid: 49593f548e6f1de469a6c51d7773edcb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -468,6 +470,35 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &586367826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586367818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88c7df3479639d44595c8221d5da79b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  characterData: {fileID: 11400000, guid: f518c6ec25b4e76459ea08bd0d2c0517, type: 2}
+  experience: 0
+  level: 1
+  experienceCap: 100
+  experienceCapIncrease: 100
+--- !u!114 &586367827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 586367818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 373e9b486ce344d44949f07e715e1600, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1168662912
 GameObject:
   m_ObjectHideFlags: 0
@@ -617,6 +648,10 @@ PrefabInstance:
     - target: {fileID: 1978813305570364907, guid: f72f1c86804788c4a96fb9764678ffd9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3938348457512622991, guid: f72f1c86804788c4a96fb9764678ffd9, type: 3}
+      propertyPath: drops.Array.data[0].dropDrate
+      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f72f1c86804788c4a96fb9764678ffd9, type: 3}
