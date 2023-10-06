@@ -22,5 +22,14 @@ public class ShieldBehaviour : MeleeWeaponBehaviour
             
             markedEnemies.Add(col.gameObject); //mark the enemy so that it doesn't take another instance of damage from shield
         }
+        else if (col.CompareTag("Prop"))
+        {
+            if (col.gameObject.TryGetComponent(out BreakableProps breakable) && !markedEnemies.Contains(col.gameObject))
+            {
+                breakable.TakeDamage(currentDamage);
+
+                markedEnemies.Add(col.gameObject);
+            }
+        }
     }
 }

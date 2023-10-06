@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 3364195450055904112}
   - component: {fileID: 8959091943400407352}
   - component: {fileID: 4004876909522086616}
+  - component: {fileID: 8767576485064465344}
+  - component: {fileID: -3082999153719812515}
   m_Layer: 0
   m_Name: terrain_13
-  m_TagString: Untagged
+  m_TagString: Prop
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,3 +113,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &8767576485064465344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479591750930575338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79ba5e678f339d04ca20ede2c4ffbf68, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+--- !u!114 &-3082999153719812515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3479591750930575338}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9c92c53f67d9924dac8353a69b7daf8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drops:
+  - name: HP potion
+    itemPrefab: {fileID: 8221235178732678853, guid: 74cd63cd7a9cfad449624158eff2ce2b, type: 3}
+    dropDrate: 50
