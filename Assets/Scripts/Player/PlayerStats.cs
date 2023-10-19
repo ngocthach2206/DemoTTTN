@@ -8,17 +8,17 @@ public class PlayerStats : MonoBehaviour
     CharacterScriptableObject characterData;
 
     //Current stats
-    [HideInInspector]
+    //[HideInInspector]
     public float currentHealth;
-    [HideInInspector]
+    //[HideInInspector]
     public float currentRecovery;
-    [HideInInspector]
+    //[HideInInspector]
     public float currentMoveSpeed;
-    [HideInInspector]
+    //[HideInInspector]
     public float currentMight;
-    [HideInInspector]
+    //[HideInInspector]
     public float currentProjectileSpeed;
-    [HideInInspector]
+    //[HideInInspector]
     public float currentMagnet;
 
     //Spawned Weapon
