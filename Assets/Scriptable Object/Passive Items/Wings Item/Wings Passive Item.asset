@@ -13,3 +13,6 @@ MonoBehaviour:
   m_Name: Wings Passive Item
   m_EditorClassIdentifier: 
   multipler: 50
+  level: 1
+  nextLevelPrefab: {fileID: 5178655348883014672, guid: 4abdf2682a39c584eb965c1bc783052c, type: 3}
+  icon: {fileID: -1120369280, guid: 27ffa970b74f5f14592c7070a0ae760d, type: 3}

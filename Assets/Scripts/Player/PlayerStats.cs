@@ -39,6 +39,7 @@ public class PlayerStats : MonoBehaviour
     public int passiveItemIndex;
 
     public GameObject firstPassiveItemTest, secondPassiveItemTest;
+    public GameObject weaponTest;
 
     void Awake()
     {
@@ -59,6 +60,7 @@ public class PlayerStats : MonoBehaviour
 
         SpawnPassiveItem(firstPassiveItemTest);
         SpawnPassiveItem(secondPassiveItemTest);
+        SpawnWeapon(weaponTest);
     }
 
     void Update()
