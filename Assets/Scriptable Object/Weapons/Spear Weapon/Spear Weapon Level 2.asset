@@ -12,11 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14e8efdc4d2b80e4fa31291752c7d07e, type: 3}
   m_Name: Spear Weapon Level 2
   m_EditorClassIdentifier: 
-  prefab: {fileID: 193014602129781793, guid: 97e21f208926df949b9831163ed10199, type: 3}
+  prefab: {fileID: 193014602129781793, guid: 4dd222c7858a963488ac97e9b8756d88, type: 3}
   damage: 5
   speed: 15
   cooldownDuration: 2
   pierce: 1
   level: 2
   nextLevelPrefab: {fileID: 0}
+  name: Spear Level 2
+  description: Speed is up by 5
   icon: {fileID: 944399547, guid: 27ffa970b74f5f14592c7070a0ae760d, type: 3}

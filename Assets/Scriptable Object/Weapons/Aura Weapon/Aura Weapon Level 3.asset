@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14e8efdc4d2b80e4fa31291752c7d07e, type: 3}
-  m_Name: Aura Weapon Level 2
+  m_Name: Aura Weapon Level 3
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1438542618618499498, guid: e7cd04f49c612d14db300e049539e0b1, type: 3}
-  damage: 10
+  prefab: {fileID: 1438542618618499498, guid: b8d1acb8c9f34b04bbbb41a7d0a46527, type: 3}
+  damage: 15
   speed: 0
   cooldownDuration: 2.5
   pierce: 0
-  level: 2
-  nextLevelPrefab: {fileID: 6261442234632592587, guid: b67cf042273ec4044a1be6d7138d8ea1, type: 3}
-  name: Aura Level 2
-  description: Cooldown reduce by 0.5
+  level: 3
+  nextLevelPrefab: {fileID: 0}
+  name: Aura Level 3
+  description: Damage up by 5
   icon: {fileID: 755413208, guid: 27ffa970b74f5f14592c7070a0ae760d, type: 3}
