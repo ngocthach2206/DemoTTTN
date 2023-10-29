@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class PlayerStats : MonoBehaviour
 {
@@ -134,10 +135,10 @@ public class PlayerStats : MonoBehaviour
     [Header("UI")]
     public Image healthBar;
     public Image experienceBar;
-    public Text levelText;
+    public TMP_Text levelText;
 
-    public GameObject firstPassiveItemTest, secondPassiveItemTest;
-    public GameObject weaponTest;
+    //public GameObject firstPassiveItemTest, secondPassiveItemTest;
+    //public GameObject weaponTest;
 
     void Awake()
     {
@@ -157,7 +158,7 @@ public class PlayerStats : MonoBehaviour
         SpawnWeapon(characterData.StartingWeapon);
 
         //SpawnPassiveItem(firstPassiveItemTest);
-        SpawnPassiveItem(secondPassiveItemTest);
+        //SpawnPassiveItem(secondPassiveItemTest);
         //SpawnWeapon(weaponTest);
     }
 
