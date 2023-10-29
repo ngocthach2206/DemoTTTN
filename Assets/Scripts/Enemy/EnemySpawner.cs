@@ -33,6 +33,8 @@ public class EnemySpawner : MonoBehaviour
     public bool maxEnemiesReached = false; //flag for determine if maximum number of enemies has beend reached
     public float waveInterval; //interval between each wave
 
+    bool isWaveActive = false;
+
     [Header("Spawn Positions")]
     public List<Transform> relativeSpawnPoints; //list to store all the spawn points of enemies
 
@@ -49,7 +51,7 @@ public class EnemySpawner : MonoBehaviour
     void Update()
     {
         //check if the wave has ended and the next wave should start
-        if(currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0)
+        if(currentWaveCount < waves.Count && waves[currentWaveCount].spawnCount == 0 && !isWaveActive)
         {
             StartCoroutine(BeginNextWave());
         }
@@ -65,11 +67,14 @@ public class EnemySpawner : MonoBehaviour
 
     IEnumerator BeginNextWave()
     {
+        isWaveActive = true;
+
         //wait "waveInternal" seconds before starting next wave
         yield return new WaitForSeconds(waveInterval);
         //if there are more waves to start after the current wave, then move on to the next wave
         if(currentWaveCount < waves.Count - 1)
         {
+            isWaveActive = false;
             currentWaveCount++;
             CalculateWaveQuota();
         }
@@ -102,27 +107,21 @@ public class EnemySpawner : MonoBehaviour
                 //check if the minimum number of enemies of this type have been spawned
                 if(enemyGroup.spawnCount < enemyGroup.enemyCount)
                 {
-                    //limit the number of enemies can be spawned at once
-                    if(enemiesAlive >= maxEnemiesAllowed)
-                    {
-                        maxEnemiesReached = true;
-                        return;
-                    }
-
                     //spawn the enemies at a random position close to player
                     Instantiate(enemyGroup.enemyPrefabs, player.position + relativeSpawnPoints[Random.Range(0, relativeSpawnPoints.Count)].position, Quaternion.identity);              
 
                     enemyGroup.spawnCount++;
                     waves[currentWaveCount].spawnCount++;
                     enemiesAlive++;
+
+                    //limit the number of enemies can be spawned at once
+                    if (enemiesAlive >= maxEnemiesAllowed)
+                    {
+                        maxEnemiesReached = true;
+                        return;
+                    }
                 }
             }
-        }
-
-        //reset the flag if the number of enemies alive is below the maximum amount
-        if(enemiesAlive < maxEnemiesAllowed)
-        {
-            maxEnemiesReached = false;
         }
     }
 
@@ -131,5 +130,11 @@ public class EnemySpawner : MonoBehaviour
     {
         //decrement the number of enemies alive
         enemiesAlive--;
+
+        //reset the flag if the number of enemies alive is below the maximum amount
+        if (enemiesAlive < maxEnemiesAllowed)
+        {
+            maxEnemiesReached = false;
+        }
     }
 }
