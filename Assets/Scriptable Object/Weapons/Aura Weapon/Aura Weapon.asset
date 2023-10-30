@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Aura Weapon
   m_EditorClassIdentifier: 
   prefab: {fileID: 1438542618618499498, guid: 2797452dcca0f944f9fbec58f24c1f33, type: 3}
-  damage: 10
+  damage: 5
   speed: 0
   cooldownDuration: 3.5
   pierce: 0
@@ -21,4 +21,5 @@ MonoBehaviour:
   nextLevelPrefab: {fileID: 6261442234632592587, guid: 0870a90509b3b3e49ba9407853ddd009, type: 3}
   name: Aura
   description: Deals damage to every enemy inside
-  icon: {fileID: 755413208, guid: 27ffa970b74f5f14592c7070a0ae760d, type: 3}
+  icon: {fileID: -1514425642, guid: 27ffa970b74f5f14592c7070a0ae760d, type: 3}
+  evolvedUpgradeToRemove: 0

@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14e8efdc4d2b80e4fa31291752c7d07e, type: 3}
-  m_Name: Aura Weapon Level 3
+  m_Name: Evolved Spear Weapon
   m_EditorClassIdentifier: 
-  prefab: {fileID: 1438542618618499498, guid: b8d1acb8c9f34b04bbbb41a7d0a46527, type: 3}
+  prefab: {fileID: 193014602129781793, guid: 50225ac2d51f1454c8cd32bb6c7a14d3, type: 3}
   damage: 10
-  speed: 0
-  cooldownDuration: 3
-  pierce: 0
-  level: 3
+  speed: 15
+  cooldownDuration: 2
+  pierce: 2
+  level: 1
   nextLevelPrefab: {fileID: 0}
-  name: Aura Level 3
-  description: Damage up by 5
-  icon: {fileID: -1514425642, guid: 27ffa970b74f5f14592c7070a0ae760d, type: 3}
-  evolvedUpgradeToRemove: 0
+  name: Spear of Legendary Hero
+  description: The spear was used by legendary hero have more powerful
+  icon: {fileID: 921188613, guid: 27ffa970b74f5f14592c7070a0ae760d, type: 3}

@@ -567,7 +567,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 177300325}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -643,7 +643,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 197016444}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -1500,7 +1500,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 386146938}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -2494,6 +2494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88c7df3479639d44595c8221d5da79b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageEffect: {fileID: 1230500214979439015, guid: 9290deb0dbdd55c4e9cb374270ed2944, type: 3}
   experience: 0
   level: 1
   experienceCap: 100
@@ -2577,6 +2578,8 @@ MonoBehaviour:
     upgradeDescriptionDisplay: {fileID: 810895180}
     upgradeIcon: {fileID: 1482194484}
     upgradeButton: {fileID: 1852508753}
+  weaponEvolutions:
+  - {fileID: 11400000, guid: f740f4f20dd619d439e232a08597473f, type: 2}
 --- !u!1 &593675534
 GameObject:
   m_ObjectHideFlags: 0
@@ -3091,7 +3094,7 @@ MonoBehaviour:
   - waveName: Wave 1
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 20
+      enemyCount: 30
       spawnCount: 0
       enemyPrefabs: {fileID: 1978813305570364886, guid: f72f1c86804788c4a96fb9764678ffd9, type: 3}
     waveQuota: 0
@@ -3100,7 +3103,7 @@ MonoBehaviour:
   - waveName: Wave 2
     enemyGroups:
     - enemyName: Red Bat
-      enemyCount: 10
+      enemyCount: 15
       spawnCount: 0
       enemyPrefabs: {fileID: 1978813305570364886, guid: 4582ab90f44fd6144899f1dc0b993669, type: 3}
     waveQuota: 0
@@ -3109,20 +3112,7 @@ MonoBehaviour:
   - waveName: Wave 3
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 25
-      spawnCount: 0
-      enemyPrefabs: {fileID: 1978813305570364886, guid: f72f1c86804788c4a96fb9764678ffd9, type: 3}
-    - enemyName: Red Bat
-      enemyCount: 15
-      spawnCount: 0
-      enemyPrefabs: {fileID: 1978813305570364886, guid: 4582ab90f44fd6144899f1dc0b993669, type: 3}
-    waveQuota: 0
-    spawnInterval: 1
-    spawnCount: 0
-  - waveName: Wave 4
-    enemyGroups:
-    - enemyName: Bat
-      enemyCount: 30
+      enemyCount: 40
       spawnCount: 0
       enemyPrefabs: {fileID: 1978813305570364886, guid: f72f1c86804788c4a96fb9764678ffd9, type: 3}
     - enemyName: Red Bat
@@ -3130,12 +3120,25 @@ MonoBehaviour:
       spawnCount: 0
       enemyPrefabs: {fileID: 1978813305570364886, guid: 4582ab90f44fd6144899f1dc0b993669, type: 3}
     waveQuota: 0
-    spawnInterval: 1
+    spawnInterval: 4
+    spawnCount: 0
+  - waveName: Wave 4
+    enemyGroups:
+    - enemyName: Bat
+      enemyCount: 50
+      spawnCount: 0
+      enemyPrefabs: {fileID: 1978813305570364886, guid: f72f1c86804788c4a96fb9764678ffd9, type: 3}
+    - enemyName: Red Bat
+      enemyCount: 25
+      spawnCount: 0
+      enemyPrefabs: {fileID: 1978813305570364886, guid: 4582ab90f44fd6144899f1dc0b993669, type: 3}
+    waveQuota: 0
+    spawnInterval: 4
     spawnCount: 0
   - waveName: Wave 5
     enemyGroups:
     - enemyName: Bat
-      enemyCount: 35
+      enemyCount: 50
       spawnCount: 0
       enemyPrefabs: {fileID: 1978813305570364886, guid: f72f1c86804788c4a96fb9764678ffd9, type: 3}
     - enemyName: Red Bat
@@ -3147,9 +3150,9 @@ MonoBehaviour:
     spawnCount: 0
   currentWaveCount: 0
   enemiesAlive: 0
-  maxEnemiesAllowed: 30
+  maxEnemiesAllowed: 100
   maxEnemiesReached: 0
-  waveInterval: 10
+  waveInterval: 30
   relativeSpawnPoints:
   - {fileID: 949531786}
   - {fileID: 846816515}
@@ -3303,9 +3306,9 @@ RectTransform:
   m_Father: {fileID: 1441637824}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 325, y: -538.875}
   m_SizeDelta: {x: 625, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &760379166
@@ -3602,7 +3605,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 807486960}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -3967,7 +3970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 373e9b486ce344d44949f07e715e1600, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pullSpeed: 300
+  pullSpeed: 500
 --- !u!1 &906105120
 GameObject:
   m_ObjectHideFlags: 0
@@ -4568,7 +4571,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963588105}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -4931,7 +4934,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1025497431}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -5444,9 +5447,9 @@ RectTransform:
   m_Father: {fileID: 1441637824}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 325, y: -389.625}
   m_SizeDelta: {x: 625, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1176808115
@@ -5532,7 +5535,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184352120}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -5999,7 +6002,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1245642067}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -7368,6 +7371,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentState: 0
   previousState: 0
+  damageTextCanvas: {fileID: 593675537}
+  textFontSize: 25
+  textFont: {fileID: 11400000, guid: 82a37a828b163b64a81459a34b68d017, type: 2}
+  referenceCamera: {fileID: 0}
   pauseScreen: {fileID: 1479126341}
   resultsScreen: {fileID: 1194759972}
   levelUpScreen: {fileID: 1666680880}
@@ -7395,7 +7402,7 @@ MonoBehaviour:
   - {fileID: 573313550}
   - {fileID: 1008225806}
   - {fileID: 827875043}
-  timeLimit: 1200
+  timeLimit: 600
   stopwatchDisplay: {fileID: 696825729}
   isGameOver: 0
   choosingUpgrade: 0
@@ -7861,7 +7868,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1666680881
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8168,9 +8175,9 @@ RectTransform:
   m_Father: {fileID: 1441637824}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 325, y: -91.125}
   m_SizeDelta: {x: 625, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1782074375
@@ -8601,7 +8608,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1799633614}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -9040,7 +9047,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1933045664}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -9251,7 +9258,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2003345787}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
@@ -9395,9 +9402,9 @@ RectTransform:
   m_Father: {fileID: 1441637824}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 325, y: -240.375}
   m_SizeDelta: {x: 625, y: 145}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2012645004
@@ -9963,7 +9970,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2091058335}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 

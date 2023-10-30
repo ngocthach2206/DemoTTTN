@@ -115,6 +115,8 @@ public class PlayerStats : MonoBehaviour
     }
     #endregion
 
+    public ParticleSystem damageEffect;
+
     //Experence and level of player
     [Header("Experience/Level")]
     public int experience = 0;
@@ -177,7 +179,6 @@ public class PlayerStats : MonoBehaviour
         UpdateHealthBar();
         UpdateExperienceBar();
         UpdateLevelText();
-
     }
 
     void Update()
@@ -234,6 +235,10 @@ public class PlayerStats : MonoBehaviour
         if(!isInvincible)
         {
             CurrentHealth -= dmg;
+            if(damageEffect)
+            {
+                Instantiate(damageEffect, transform.position, Quaternion.identity);
+            }
             invincibilityTimer = invincibilityDuration;
             isInvincible = true;
 

@@ -18,7 +18,7 @@ public class ShieldBehaviour : MeleeWeaponBehaviour
         if (col.CompareTag("Enemy") && !markedEnemies.Contains(col.gameObject))
         {
             EnemyStats enemy = col.GetComponent<EnemyStats>();
-            enemy.TakeDamage(GetCurrentDamage());
+            enemy.TakeDamage(GetCurrentDamage(), transform.position);
             
             markedEnemies.Add(col.gameObject); //mark the enemy so that it doesn't take another instance of damage from shield
         }

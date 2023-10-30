@@ -164,6 +164,9 @@ MonoBehaviour:
   currentHealth: 0
   currentDamage: 0
   despawnDistance: 20
+  damageColor: {r: 1, g: 0, b: 0, a: 1}
+  damageFlashDuration: 0.2
+  deathFadeTime: 0.6
 --- !u!114 &3938348457512622991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,3 +183,9 @@ MonoBehaviour:
   - name: Blue gem
     itemPrefab: {fileID: 2024740891019260528, guid: 143ee7e0c3e516a4cbd0dedcf1b501c1, type: 3}
     dropDrate: 100
+  - name: Blue gem
+    itemPrefab: {fileID: 2024740891019260528, guid: 143ee7e0c3e516a4cbd0dedcf1b501c1, type: 3}
+    dropDrate: 25
+  - name: Treasure Chest
+    itemPrefab: {fileID: 4727859466819356731, guid: 1c57a01b98e81384c9b394f4e154eaa9, type: 3}
+    dropDrate: 30

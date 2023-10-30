@@ -16,8 +16,8 @@ MonoBehaviour:
   name: Aura Weapon
   startingWeapon: {fileID: 6261442234632592587, guid: fa55d3a7985c4294bbf2fc056feae3c9, type: 3}
   maxHealth: 200
-  recovery: 1
-  moveSpeed: 5
+  recovery: 2
+  moveSpeed: 3
   might: 1
   projectileSpeed: 0
   magnet: 2

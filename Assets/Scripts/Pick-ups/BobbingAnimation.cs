@@ -8,16 +8,21 @@ public class BobbingAnimation : MonoBehaviour
     public float magnitude; //range of movement
     public Vector3 direction;
     Vector3 initialPosition;
+    Pickup pickup;
 
     void Start()
     {
+        pickup = GetComponent<Pickup>();
         //save the starting position of game object
         initialPosition = transform.position;
     }
 
     void Update()
     {
-        //sine the function for smooth bobbing effect
-        transform.position = initialPosition + direction * Mathf.Sin(Time.time * frequency) * magnitude;
+        if(pickup && !pickup.hasBeenCollected)
+        {
+            //sine the function for smooth bobbing effect
+            transform.position = initialPosition + direction * Mathf.Sin(Time.time * frequency) * magnitude;
+        }
     }
 }
