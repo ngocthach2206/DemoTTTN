@@ -94,7 +94,7 @@ public class EnemySpawner : MonoBehaviour
 
     /// <summary>
     /// This method will stop spawning enemies if the amount of enemies on the map is maximum.
-    /// The method will only spawn enemies in a particular wave untril it is time for the next wave's enemies to be spawned.
+    /// The method will only spawn enemies in a particular wave until it is time for the next wave's enemies to be spawned.
     /// </summary>
     void SpawnEnemies()
     {

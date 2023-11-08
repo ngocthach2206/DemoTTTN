@@ -30,7 +30,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        InputManagment();
+        InputManagement();
     }
 
     void FixedUpdate()
@@ -38,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
         Move();
     }
 
-    void InputManagment()
+    void InputManagement()
     {
         if(GameManager.instance.isGameOver)
         {

@@ -28,7 +28,7 @@ public class PlayerStats : MonoBehaviour
                 currentHealth = value;
                 if(GameManager.instance != null)
                 {
-                    GameManager.instance.currentHealthDisplay.text = "Health: " + currentHealth;
+                    GameManager.instance.currentHealthDisplay.text = "Health: " + (int)currentHealth;
                 }
             }
         }
@@ -166,8 +166,8 @@ public class PlayerStats : MonoBehaviour
 
     void Start()
     {
-        //set the currwnt stats display
-        GameManager.instance.currentHealthDisplay.text = "Health: " + currentHealth;
+        //set the current stats display
+        GameManager.instance.currentHealthDisplay.text = "Health: " + (int)currentHealth;
         GameManager.instance.currentRecoveryDisplay.text = "Recovery: " + currentRecovery;
         GameManager.instance.currentMoveSpeedDisplay.text = "Move Speed: " + currentMoveSpeed;
         GameManager.instance.currentMightDisplay.text = "Might: " + currentMight;
