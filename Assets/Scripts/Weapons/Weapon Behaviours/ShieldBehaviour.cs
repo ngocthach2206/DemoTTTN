@@ -20,7 +20,7 @@ public class ShieldBehaviour : MeleeWeaponBehaviour
             EnemyStats enemy = col.GetComponent<EnemyStats>();
             enemy.TakeDamage(GetCurrentDamage(), transform.position);
             
-            markedEnemies.Add(col.gameObject); //mark the enemy so that it doesn't take another instance of damage from shield
+            markedEnemies.Add(col.gameObject); //mark the enemy so that it doesn't take another instance of damage from aura
         }
         else if (col.CompareTag("Prop"))
         {
